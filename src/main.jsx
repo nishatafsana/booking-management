@@ -4,6 +4,8 @@ import './index.css'
 import { RouterProvider,
 } from "react-router-dom";
 import { router } from './routes/Router.jsx';
+import 'react-date-range/dist/styles.css'
+import 'react-date-range/dist/theme/default.css'
 import { HelmetProvider } from 'react-helmet-async';
 import { Toaster } from 'react-hot-toast';
 import {

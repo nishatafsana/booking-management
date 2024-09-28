@@ -7,17 +7,20 @@ import Heading from "../../shared/Navbar/Heading"
 import { useQuery } from "@tanstack/react-query"
 
 import useAxiosCommon from "../../hooks/useAxiosCommon"
+import { useSearchParams } from "react-router-dom"
 
 const Rooms = () => {
   const axiosCommon=useAxiosCommon()
-  
+  const [params, setParams] = useSearchParams()
+  const category = params.get('category')
 
-  const {data :rooms=[],isLoading}=useQuery({
-    queryKey:['rooms'],
-    queryFn: async()=>{
-      const {data}= await axiosCommon.get('/rooms')
+  const { data: rooms = [], isLoading } = useQuery({
+    queryKey: ['rooms', category],
+    queryFn: async () => {
+      const { data } = await axiosCommon.get(`/rooms?category=${category}`)
+
       return data
-    }
+    },
   })
 
 
