@@ -7,6 +7,7 @@ import avatarImg from '../../assets/images/placeholder.jpg'
 import HostModal from "../../Component/Modal/HostRequestModal"
 import useAxiosSecure from "../../hooks/axiosSecure"
 import toast from "react-hot-toast"
+import logo from '../../assets/images/logo1.png'
 
 const Navbar = () => {
   const { user, logOut } = useAuth()
@@ -48,13 +49,14 @@ const modalHandler = async () => {
           <div className='flex flex-row  items-center justify-between gap-3 md:gap-0'>
             {/* Logo */}
             <Link to='/'>
-              <img
+            <h1 className="font-bold">resort management</h1>
+              {/* <img
                 // className='hidden md:block'
-                src='https://i.ibb.co/4ZXzmq5/logo.png'
+                src={logo}
                 alt='logo'
-                width='100'
-                height='100'
-              />
+                width='120'
+                height='50'
+              /> */}
             </Link>
             {/* Dropdown Menu */}
             <div className='relative'>

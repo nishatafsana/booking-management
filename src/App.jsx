@@ -3,7 +3,7 @@
 const App = () => {
   return (
     <div>
-      <h4 className="text-3xl ">ji</h4>
+      <h4 className="text-3xl "></h4>
     </div>
   );
 };

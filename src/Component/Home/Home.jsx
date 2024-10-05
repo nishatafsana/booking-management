@@ -6,11 +6,13 @@ import Categories from "../Categories/Categories"
 
 
 
+
 const Home = () => {
   return (
     <div>
       <Helmet>
-        <title>StayVista | Vacation Homes & Condo Rentals</title>
+   
+        <title>resort management | Vacation Homes & Condo Rentals</title>
       </Helmet>
       {/* Categories section  */}
       <Categories />
