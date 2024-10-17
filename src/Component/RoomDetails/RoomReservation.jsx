@@ -8,7 +8,7 @@ import BookingModal from '../Modal/BookingModal'
 import useAuth from '../../hooks/useAuth'
 
 
-const RoomReservation = ({ room }) => {
+const RoomReservation = ({ room,refetch }) => {
   const { user } = useAuth()
   const [isOpen, setIsOpen] = useState(false)
   // console.log('start date-->', new Date(room.from).toLocaleDateString())
@@ -59,16 +59,21 @@ const RoomReservation = ({ room }) => {
       </div>
       <hr />
       <div className='p-4'>
-        <Button onClick={()=>setIsOpen(true)} label={'Reserve'} />
+      <Button
+          disabled={room?.booked}
+          onClick={() => setIsOpen(true)}
+          label={room?.booked ? 'Booked' : 'Reserve'}
+        />
       </div>
         {/* Modal */}
         <BookingModal
         isOpen={isOpen}
+        refetch={refetch}
         closeModal={closeModal}
         bookingInfo={{
           ...room,
           price: totalPrice,
-          guest: { name: user?.displayName },
+          guest: { name: user?.displayName ,email:user?.email,image:user?.photoURL},
         }}
       />
       <hr />

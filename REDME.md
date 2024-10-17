@@ -5,3 +5,4 @@
 # delet card /id for database
 # host howar jonno btn
 # adminakjon k banai dawar por se tar dashboard thake onno jon  ar request change korte parve.
+# booking delete hoi na
