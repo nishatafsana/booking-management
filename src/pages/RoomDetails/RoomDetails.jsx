@@ -31,13 +31,13 @@ const RoomDetails = () => {
   return (
     <Container>
       <Helmet>
-        <title>{room?.title}</title>
+        <title >{room?.title}</title>
       </Helmet>
       {room && (
         <div className='max-w-screen-lg mx-auto'>
           {/* Header */}
           <div className='flex flex-col gap-6'>
-            <div>
+            <div className="mt-12">
               <Heading title={room.title} subtitle={room.location} />
               <div className='w-full md:h-[60vh] overflow-hidden rounded-xl'>
                 <img
@@ -69,6 +69,7 @@ const RoomDetails = () => {
                     height='30'
                     width='30'
                     alt='Avatar'
+                    referrerPolicy="no-referrer"
                     src={room?.host?.image}
                   />
                 </div>

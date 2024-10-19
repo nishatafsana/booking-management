@@ -65,13 +65,13 @@ const SignUp = () => {
       <div className='flex flex-col max-w-md p-6 rounded-md sm:p-10 bg-gray-100 text-gray-900'>
         <div className='mb-8 text-center'>
           <h1 className='my-3 text-4xl font-bold'>Sign Up</h1>
-          <p className='text-sm text-gray-400'>Welcome to StayVista</p>
+          <p className='text-sm text-gray-400'>Welcome to Resort-Management</p>
         </div>
         <form onSubmit={handleSubmit} className='space-y-6'>
           <div className='space-y-4'>
             <div>
               <label htmlFor='email' className='block mb-2 text-sm'>
-                Name
+                Name: <span className='text-red-600'>***</span>
               </label>
               <input
                 type='text'
@@ -84,7 +84,7 @@ const SignUp = () => {
             </div>
             <div>
               <label htmlFor='image' className='block mb-2 text-sm'>
-                Select Image:
+              Select Your Profile  Image <span className='text-red-600'>***</span>
               </label>
               <input
                 required
@@ -96,7 +96,7 @@ const SignUp = () => {
             </div>
             <div>
               <label htmlFor='email' className='block mb-2 text-sm'>
-                Email address
+                Email address <span className='text-red-600'>***</span>
               </label>
               <input
                 type='email'
@@ -111,7 +111,7 @@ const SignUp = () => {
             <div>
               <div className='flex justify-between'>
                 <label htmlFor='password' className='text-sm mb-2'>
-                  Password
+                  Password <span className='text-red-600'>***</span>
                 </label>
               </div>
               <input

@@ -8,6 +8,7 @@ import HostModal from "../../Component/Modal/HostRequestModal"
 import useAxiosSecure from "../../hooks/axiosSecure"
 import toast from "react-hot-toast"
 import logo from '../../assets/images/logo.png'
+import Search from "./Search"
 
 const Navbar = () => {
   const { user, logOut } = useAuth()
@@ -54,10 +55,11 @@ const modalHandler = async () => {
                 className='hidden md:block'
                 src={logo}
                 alt='logo'
-                width='50'
-                height='50'
+                width='80'
+                height='80'
               />
             </Link>
+            <Search></Search>
             {/* Dropdown Menu */}
             <div className='relative'>
               <div className='flex flex-row items-center gap-3'>
